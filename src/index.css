@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 42 45% 97%;
+    --foreground: 120 25% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 120 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 120 25% 15%;
+
+    --primary: 105 45% 25%;
+    --primary-foreground: 42 45% 97%;
+
+    --secondary: 28 35% 45%;
+    --secondary-foreground: 42 45% 97%;
+
+    --muted: 42 25% 90%;
+    --muted-foreground: 120 15% 40%;
+
+    --accent: 195 65% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 42 20% 85%;
+    --input: 42 20% 85%;
+    --ring: 105 45% 35%;
+
+    --radius: 0.75rem;
+
+    --success: 110 45% 45%;
+    
+    /* Nature-inspired gradients */
+    --gradient-forest: linear-gradient(135deg, hsl(105 45% 25%) 0%, hsl(120 40% 35%) 100%);
+    --gradient-earth: linear-gradient(135deg, hsl(28 35% 45%) 0%, hsl(35 40% 55%) 100%);
+    --gradient-sky: linear-gradient(135deg, hsl(195 65% 55%) 0%, hsl(200 60% 65%) 100%);
+    --gradient-hero: linear-gradient(to bottom, hsl(105 45% 25% / 0.7), hsl(120 40% 20% / 0.9));
+    
+    /* Shadows */
+    --shadow-soft: 0 2px 10px hsl(120 25% 15% / 0.08);
+    --shadow-medium: 0 4px 20px hsl(120 25% 15% / 0.12);
+    --shadow-strong: 0 10px 40px hsl(120 25% 15% / 0.16);
+  }
+
+  .dark {
+    --background: 120 25% 8%;
+    --foreground: 42 45% 95%;
+
+    --card: 120 20% 12%;
+    --card-foreground: 42 45% 95%;
+
+    --popover: 120 20% 12%;
+    --popover-foreground: 42 45% 95%;
+
+    --primary: 105 50% 65%;
+    --primary-foreground: 120 25% 10%;
+
+    --secondary: 28 30% 30%;
+    --secondary-foreground: 42 45% 95%;
+
+    --muted: 120 15% 18%;
+    --muted-foreground: 42 25% 65%;
+
+    --accent: 195 60% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 65% 45%;
+    --destructive-foreground: 42 45% 95%;
+
+    --border: 120 15% 20%;
+    --input: 120 15% 20%;
+    --ring: 105 50% 55%;
+
+    --success: 110 50% 55%;
+    
+    /* Dark mode gradients */
+    --gradient-forest: linear-gradient(135deg, hsl(105 50% 20%) 0%, hsl(120 45% 30%) 100%);
+    --gradient-earth: linear-gradient(135deg, hsl(28 30% 25%) 0%, hsl(35 35% 35%) 100%);
+    --gradient-sky: linear-gradient(135deg, hsl(195 55% 40%) 0%, hsl(200 50% 50%) 100%);
+    --gradient-hero: linear-gradient(to bottom, hsl(105 40% 15% / 0.8), hsl(120 35% 10% / 0.95));
+    
+    --shadow-soft: 0 2px 10px hsl(0 0% 0% / 0.3);
+    --shadow-medium: 0 4px 20px hsl(0 0% 0% / 0.4);
+    --shadow-strong: 0 10px 40px hsl(0 0% 0% / 0.5);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
